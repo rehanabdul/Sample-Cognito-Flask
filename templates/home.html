@@ -1,0 +1,23 @@
+{% extends "template.html" %}
+
+{% block content %}
+<h2>Custom Login + Flask Example</h2>
+
+{% if current_user.is_authenticated %}
+<div>
+    <p>Welcome back, <span>{{current_user.name}}</span>!</p>
+    <p>Visit the <a href="{{ url_for('profile') }}">My Profile</a> page in this application to view the information
+        retrieved with your OAuth Access Token.</p>
+</div>
+{% else %}
+<div>
+    <p>Hello!</p>
+    <p>Welcome to photon demo Please login using login below</p>
+    <p>When you click the login button below, you will be redirected to the login page on your local application.</p>
+</div>
+
+<form method="get" action="login">
+    <button id="login-button" class="btn btn-primary" type="submit">Login</button>
+</form>
+{% endif %}
+{% endblock content %}
