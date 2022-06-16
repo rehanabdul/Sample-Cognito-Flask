@@ -3,11 +3,6 @@
 
 To run this application, you first need to clone this repo and then enter into this directory:
 
-```bash
-git clone git@github.com:okta/samples-python-flask.git
-cd samples-python-flask
-```
-
 Then install dependencies:
 
 ```bash
